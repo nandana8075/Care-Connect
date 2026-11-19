@@ -1,0 +1,55 @@
+###
+GET http://127.0.0.1:8000/api/doctor/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/api/doctor/
+Content-Type: application/json
+
+{
+    "doctor_name": "aysha",
+    "specialization": "cosemetology",
+    "experience":12,
+    "hospital":"renai",
+    "consultation_fee": 700
+}
+
+###
+GET http://127.0.0.1:8000/api/doctor/3/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/api/doctor/3/
+Content-Type: application/json
+
+{ 
+    "id": 3,
+  "doctor_name": "Arjun",
+  "specialization": "pediatrian",
+  "experience": 3,
+  "hospital": "x ray",
+  "consultation_fee": 1000,
+  "available": true
+}
+
+###
+DELETE http://127.0.0.1:8000/api/doctor/2/
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/api/appointment/
+Accept: application/json
+
+
+###
+POST http://127.0.0.1:8000/api/appointment/
+Content-Type: application/json
+
+{
+  "patient_name":"abhijit",
+  "phone":"8806907065",
+  "doctor_id":"2",
+  "appointment_date":"2026-10-28",
+  "problem":"back pain"
+
+}
